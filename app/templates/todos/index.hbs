@@ -1,0 +1,32 @@
+<ul id="todo-list">
+  {{#each model as |bunny|}}
+    {{todo-item zebra=bunny}}
+  {{/each}}
+</ul>
+
+
+
+
+<!-- <ul id="todo-list"> -->
+<!-- {{!#each model as |todo|}}
+{{!todo-item todo=todo}} -->
+<!-- remember todo=todo is taking the todo looping var and setting it to todo -->
+
+<!-- Below is a way to help you visulalize what is happening refer to the commented out code on todo-item.hbs under templates/components -->
+<!-- {{!#each model as |bunny|}}
+{{!todo-item zebra=bunny}} -->
+<!-- todo-item is coming from the todo-item.hbs file, which is an object -->
+<!-- zebra=bunny... you are looping through bunny (from the modle hook) and assigning that value to zebra  -->
+<!-- {{!/each}}
+</ul> -->
+
+
+<!-- This was the original code (below) the above code was created to  -->
+<!-- <ul id="todo-list">
+{{!#each model as |todo|}}
+<li class="completed">
+<input type="checkbox" class="toggle">
+<label>{{!todo.title}}</label><button class="destroy"></button>
+</li>
+{{!/each}}
+</ul> -->

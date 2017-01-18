@@ -1,0 +1,15 @@
+{{#if editing}}
+  <input class="edit">
+{{else}}
+  {{input type="checkbox" checked=zebra.complete class="toggle"}}
+  <label class="{{if zebra.complete 'completed'}}" {{action "editTodo" on="doubleClick"}}>{{zebra.title}}</label>
+  <button class="destroy"></button>
+{{/if}}
+
+
+<!-- Below is older code, it was updated to be able to toggle the value of complete with the above code -->
+
+<!-- refer to index.hbs file for reference to zebra -->
+<!-- <input type="checkbox" class="toggle" checked="{{if zebra.complete 'checked'}}"> -->
+<!-- checked is an html property that is a boolean -->
+<!-- <label class="{{if zebra.complete 'completed'}}">{{zebra.title}}</label><button class="destroy"></button> -->

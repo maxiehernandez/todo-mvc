@@ -1,0 +1,45 @@
+<input type="text" id="new-todo" placeholder="What needs to be done?" />
+
+<section id="main">
+  {{!-- This is where our todos will go --}}
+  {{outlet}}
+
+  <input type="checkbox" id="toggle-all">
+</section>
+
+<!-- This was the original code (below) the above code was created to move the below code into separate child files. Note the outlet in the above code. This is where the child files will load. -->
+<!-- <input type="text" id="new-todo" placeholder="What needs to be done?" />
+
+<section id="main">
+  <ul id="todo-list">
+    {{#each model as |todo|}}
+    <li class="completed">
+      <input type="checkbox" class="toggle">
+      <label>{{todo.title}}</label><button class="destroy"></button>
+    </li>
+    {{/each}}
+  </ul>
+
+  <input type="checkbox" id="toggle-all">
+</section> -->
+
+<footer id="footer">
+  <span id="todo-count">
+    <strong>2</strong> todos left
+  </span>
+  <ul id="filters">
+    <li>
+      <a href="all" class="selected">All</a>
+    </li>
+    <li>
+      <a href="active">Active</a>
+    </li>
+    <li>
+      <a href="completed">Completed</a>
+    </li>
+  </ul>
+
+  <button id="clear-completed">
+    Clear completed (1)
+  </button>
+</footer>
