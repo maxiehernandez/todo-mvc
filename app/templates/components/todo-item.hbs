@@ -1,9 +1,10 @@
 {{#if editing}}
-  <input class="edit">
+  {{input class="edit" value=zebra.title action="submitTodo"}}
+  <!-- <input class="edit"> -->
 {{else}}
   {{input type="checkbox" checked=zebra.complete class="toggle"}}
   <label class="{{if zebra.complete 'completed'}}" {{action "editTodo" on="doubleClick"}}>{{zebra.title}}</label>
-  <button class="destroy"></button>
+  <button class="destroy" {{action "deleteTodo"}}></button>
 {{/if}}
 
 

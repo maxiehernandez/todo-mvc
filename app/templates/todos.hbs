@@ -1,11 +1,9 @@
 <input type="text" id="new-todo" placeholder="What needs to be done?" />
 
-<section id="main">
-  {{!-- This is where our todos will go --}}
+{{#todo-list todos=model}}
   {{outlet}}
+{{/todo-list}}
 
-  <input type="checkbox" id="toggle-all">
-</section>
 
 <!-- This was the original code (below) the above code was created to move the below code into separate child files. Note the outlet in the above code. This is where the child files will load. -->
 <!-- <input type="text" id="new-todo" placeholder="What needs to be done?" />
@@ -23,23 +21,25 @@
   <input type="checkbox" id="toggle-all">
 </section> -->
 
-<footer id="footer">
+<!-- <footer id="footer">
   <span id="todo-count">
     <strong>2</strong> todos left
   </span>
   <ul id="filters">
-    <li>
-      <a href="all" class="selected">All</a>
-    </li>
-    <li>
-      <a href="active">Active</a>
-    </li>
-    <li>
-      <a href="completed">Completed</a>
-    </li>
+      <li>
+          {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
+      </li>
+      <li>
+          {{#link-to "todos.incomplete" activeClass="selected"}}Active{{/link-to}}
+      </li>
+      <li>
+          {{#link-to "todos.complete" activeClass="selected"}}Complete{{/link-to}}
+      </li>
   </ul>
 
   <button id="clear-completed">
-    Clear completed (1)
+    <span id="todo-count">
+      <strong>{{remaining}}</strong> {{inflection}} left
+    </span>
   </button>
-</footer>
+</footer> -->
